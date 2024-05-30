@@ -54,6 +54,14 @@ public:
             cout << "Queue underflow\n";
             return;
         }
+        cout << "\nThe deleted from the queue is: " << queue_array[FRONT] << "\n";
+
+        //CEK JIKA ANTRIAN HANYA MEMILIKI SATU ELEMENT
+        if (FRONT == REAR)
+        {
+            FRONT = -1;
+            REAR = -1;
+        }
     }
 };
 
