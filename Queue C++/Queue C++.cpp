@@ -83,6 +83,17 @@ public:
         }
 
         cout << "\nElement in the Queue are...\n";
+
+        // JIKA FRONT <= REAR, ITERASI DARI FRONT HINGGA REAR
+        if (FRONT <= REAR)
+        {
+            while (FRONT <= REAR)
+            {
+                cout << queue_array[FRONT] << "  ";
+            }
+        }
+        else
+
     }
 
 };
