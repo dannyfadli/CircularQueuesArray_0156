@@ -62,6 +62,14 @@ public:
             FRONT = -1;
             REAR = -1;
         }
+        else
+        {
+            // JIKA ELEMEN YANG DIHAPUS BERADA DI POSISI TERAKHIR ARRAY,KEMBALI KE AWAL ARRAY
+            if (FRONT == max - 1)
+                FRONT = 0;
+            else FRONT = FRONT + 1;
+
+        }
     }
 };
 
