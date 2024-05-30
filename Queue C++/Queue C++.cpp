@@ -75,8 +75,13 @@ public:
 
     void display()
     {
+
+        int FRONT_Position = FRONT;
+        int REAR_Position = REAR;
+
+
         // CEK APAKAH ANTRIAN KOSOSNG
-        if (FRONT == -1)
+        if (FRONT_Position == -1)
         {
             cout << "Queue is empty\n";
             return;
@@ -85,12 +90,12 @@ public:
         cout << "\nElement in the Queue are...\n";
 
         // JIKA FRONT <= REAR, ITERASI DARI FRONT HINGGA REAR
-        if (FRONT <= REAR)
+        if (FRONT_Position <= REAR_Position)
         {
-            while (FRONT <= REAR)
+            while (FRONT_Position <= REAR_Position)
             {
-                cout << queue_array[FRONT] << "  ";
-                FRONT++;
+                cout << queue_array[FRONT_Position] << "  ";
+                FRONT_Position++;
             }
             cout << endl;
         }
@@ -98,18 +103,18 @@ public:
         else
         {
             // JIKA FRONT > REAAR ITERASI DARI FRONT HINGGA AKHIR ARRAY
-            while (FRONT <= max - 1)
+            while (FRONT_Position <= max - 1)
             {
-                cout << queue_array[FRONT] << "  ";
-                FRONT++;
+                cout << queue_array[FRONT_Position] << "  ";
+                FRONT_Position++;
             }
-            FRONT = 0;
+            FRONT_Position = 0;
 
             //ITERASI DARI AWAL ARRAY HINGGA REAR
-            while (FRONT <= REAR)
+            while (FRONT_Position <= REAR_Position)
             {
-                cout << queue_array[FRONT] << "  ";
-                FRONT++;
+                cout << queue_array[FRONT_Position] << "  ";
+                FRONT_Position++;
             }
             cout << endl;
         }
@@ -165,6 +170,11 @@ int main()
 
             }
         }
+        catch (exception& e)
+        {
+            cout << "Check for the Values entered." << endl;
+        }
     }
+    return 0;
 
 }
