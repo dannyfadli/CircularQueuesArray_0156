@@ -26,6 +26,13 @@ public:
             cout << "\nQueue overflow\n";
             return;
         }
+
+        //CEK APAKAH ANTRIAN KOSONG
+        if (FRONT == -1)
+        {
+            FRONT = 0;
+            REAR = 0;
+        }
         
     }
 };
