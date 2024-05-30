@@ -90,10 +90,29 @@ public:
             while (FRONT <= REAR)
             {
                 cout << queue_array[FRONT] << "  ";
+                FRONT++;
             }
+            cout << endl;
         }
-        else
 
+        else
+        {
+            // JIKA FRONT > REAAR ITERASI DARI FRONT HINGGA AKHIR ARRAY
+            while (FRONT <= max - 1)
+            {
+                cout << queue_array[FRONT] << "  ";
+                FRONT++;
+            }
+            FRONT = 0;
+
+            //ITERASI DARI AWAL ARRAY HINGGA REAR
+            while (FRONT <= REAR)
+            {
+                cout << queue_array[FRONT] << "  ";
+                FRONT++;
+            }
+            cout << endl;
+        }
     }
 
 };
