@@ -67,10 +67,24 @@ public:
             // JIKA ELEMEN YANG DIHAPUS BERADA DI POSISI TERAKHIR ARRAY,KEMBALI KE AWAL ARRAY
             if (FRONT == max - 1)
                 FRONT = 0;
-            else FRONT = FRONT + 1;
+            else 
+                FRONT = FRONT + 1;
 
         }
     }
+
+    void display()
+    {
+        // CEK APAKAH ANTRIAN KOSOSNG
+        if (FRONT == -1)
+        {
+            cout << "Queue is empty\n";
+            return;
+        }
+
+        cout << "\nElement in the Queue are...\n";
+    }
+
 };
 
 
