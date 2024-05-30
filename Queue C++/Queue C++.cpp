@@ -45,12 +45,19 @@ public:
         queue_array[REAR] = num;
         
     }
+
+    void remove()
+    {
+        //CEK APAKAH ANTRIAN KOSONG
+        if (FRONT == -1)
+        {
+            cout << "Queue underflow\n";
+            return;
+        }
+    }
 };
 
-void remove()
-{
 
-}
 
 int main()
 {
